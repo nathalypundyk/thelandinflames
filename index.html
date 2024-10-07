@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&amp;display=swap">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+
+    <style>
+        /* Asegura que el iframe cubra todo el fondo */
+        .button-container {
+            display: flex;
+            /* Utiliza Flexbox para centrar */
+            justify-content: center;
+            /* Centra horizontalmente */
+            align-items: center;
+            /* Centra verticalmente (si es necesario) */
+            height: 100vh;
+            /* Establece una altura para centrar verticalmente */
+        }
+
+        .btn-ver-video {
+            display: inline-block;
+            /* Para que el enlace se comporte como un botón */
+            padding: 20px 40px;
+            /* Aumenta el espaciado interno */
+            font-size: 24px;
+            /* Aumenta el tamaño de la fuente */
+            background-color: #ff0000;
+            /* Color de fondo rojo (YouTube) */
+            color: white;
+            /* Color del texto */
+            text-decoration: none;
+            /* Quita el subrayado */
+            border-radius: 10px;
+            /* Bordes redondeados */
+            font-weight: bold;
+            /* Texto en negrita */
+            transition: background-color 0.3s;
+            /* Transición suave */
+        }
+
+        .btn-ver-video:hover {
+            background-color: #cc0000;
+            /* Color de fondo al pasar el mouse */
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-background iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            /* Sin borde */
+        }
+
+        /* Estilo del contenedor del botón */
+        .centered-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            display: none;
+            /* Ocultamos el botón inicialmente */
+        }
+    </style>
+</head>
+
+<body style="background: rgb(0,0,0);">
+    <!-- Video de fondo -->
+    <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=nKPWLHS-Mb0" target="_blank" class="btn-ver-video">Ver el video</a>
+    </div>
+    <!-- <div class="video-background">
+        <iframe id="background-video" src="https://www.youtube.com/embed/nKPWLHS-Mb0?autoplay=1&enablejsapi=1"
+            allowfullscreen></iframe>
+    </div> -->
+
+
+    <div id="map" style="height: 768px;width: 100%;position: relative;background-image: url('/assets/img/mapa.png');">
+        <a href="#peru"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 25%;left: 32%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#venezuela"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 6%;left: 40%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#colombia"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 9%;left: 35%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#argentina"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 65%;left: 40%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#amazonas"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 35%;left: 50%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#chile"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 60%;left: 37%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#ecuador"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 18%;left: 30%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#bolivia"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 40%;left: 40%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#uruguay"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 61%;left: 47%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+        <a href="#paraguay"><img class="fire" src="assets/img/fire.png"
+                style="width: 55px;position: absolute;top: 47%;left: 45%;transform: translate(-50%);height: auto;cursor: pointer;animation: pulse 1s infinite;"></a>
+    </div>
+    <div style="height: 768px;width: 100%;position: relative;background: var(--bs-blue);">
+        <section id="amazonas" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <section id="amazonas-7" class="py-4 py-xl-5"
+                style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+                <div class="container" style="height: 700px;">
+                    <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                        <div class="row g-0" style="height: 650px;">
+                            <div class="col-md-6" style="height: 650px; width: 640px">
+                                <div class="text-white p-4 p-md-5"
+                                    style="background: #b2bf15;height: 650px;width: 640px;">
+                                    <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">AMAZON
+                                        RAINFOREST</h2>
+                                    <p class="mb-4" style="font-size: 22px;margin: 0px;">I am the jaguar, guardian of
+                                        the Amazon rainforest. This place, once teeming with life, is now a sea of
+                                        ashes. The Amazon, known as the lungs of the world, has seen millions of
+                                        hectares burn in recent years. The fires of the last 20 years have consumed over
+                                        120 million hectares almost the size of Peru. These fires have released large
+                                        amounts of CO₂, worsening the climate change that already affects us. It is
+                                        estimated that in 2019 alone, the fires in the Amazon released more than 220
+                                        megatons of carbon dioxide about <strong>47 million cars</strong> driven per
+                                        year.<br><br></p>
+                                    <img src="/assets/img/jaguar.png" alt="" style="width: 140px; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-first order-md-last"
+                                style="min-height: 250px;height: 650px; width: 656px;">
+                                <div class="carousel slide" data-bs-ride="carousel" id="carousel-8">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" style="height: 430px;"><img
+                                                class="w-100 d-block"
+                                                src="assets/img/Brasil%20-%20Septiembre%202007.png" alt="Slide Image"
+                                                style="object-fit: cover;">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                BRA - Sep 2007</p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/Brasil%20-%20Septiembre%202012.png">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                BRA - Sep 2012</p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/Brasil%20-%20Septiembre%202022.png" alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                BRA - Sep 2022</p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/Brasil%20pantanales.avif" alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 10px 10px;">
+                                            </p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/amazon_deforestation_amo_20240804_lrg.jpg"
+                                                alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 10px 10px;">
+                                                Amazon deforestation</p>
+                                        </div>
+                                    </div>
+                                    <div><a class="carousel-control-prev invisible" href="#carousel-8" role="button"
+                                            data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                            href="#carousel-8" role="button" data-bs-slide="next"></a></div>
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#carousel-8" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#carousel-8" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#carousel-8" data-bs-slide-to="2"></li>
+                                        <li data-bs-target="#carousel-8" data-bs-slide-to="3"></li>
+                                        <li data-bs-target="#carousel-8" data-bs-slide-to="4"></li>
+                                    </ol>
+                                </div><a href="#map" style="text-decoration: none;"><button
+                                        class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                        data-bss-hover-animate="pulse" type="button"
+                                        style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                        To Map</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="amazonas-9" class="py-4 py-xl-5"
+                style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+                <div class="container" style="height: 700px;">
+                    <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section id="bolivia" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">BOLIVIA</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Bolivia, I am one of the
+                                    thousands who have seen their homes disappear in flames. The fire does not
+                                    discriminate; it consumes both trees and animals. The year 2019 was particularly
+                                    devastating: more than 5 million hectares were destroyed, and it is estimated that
+                                    hundreds of species disappeared or saw their populations reduced.&nbsp;&nbsp;These
+                                    fires are often caused by burning land for agriculture, but climate change makes
+                                    everything worse. Prolonged droughts dry out our soils, leaving plants ready to
+                                    burn.<br><br><br></p>
+                                <img src="/assets/img/armadillo.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-7">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/Bolivia%20-%20Agosto%202004.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            BOL - Aug 2004</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Bolivia%20%20-%20Brasil%20-%20%20Agosto%202010.png"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            BOL - Aug 2010</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Bolivia%20%20-%20Brasil%20-%20%20Sept%202021.png"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            BOL - Sep 2021</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-7" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-7" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-7" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-7" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-7" data-bs-slide-to="2"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="chile" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">CHILE</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">I am the condor, and from above, I
+                                    have witnessed how fires devour the forests in Chile. In 2017 alone, more than
+                                    500,000 hectares were destroyed by fire.&nbsp;&nbsp;Stronger winds and higher
+                                    temperatures, caused by climate change, make these fires uncontrollable. In recent
+                                    years, we have seen how fire spreads faster and with more ferocity. In February
+                                    2024, 137 people died after the fire spread from the forest to the city.<br><br><br>
+                                </p>
+                                <img src="/assets/img/condor.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-6">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/Argentina%20Chile%20-%20feb%202022.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            CHL - Feb 2022</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Argentina%20uruguay%20-%20abri%202008.png"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            CHL- Apr 2008</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/chilefires_oli2_20240205.jpg" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            2024</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-6" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-6" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-6" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-6" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-6" data-bs-slide-to="2"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="argentina" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">ARGENTINA</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Argentina, forest fires have
+                                    also devastated large areas of the Chaco region and the Misiones rainforest. We are
+                                    part of a rich biodiversity, but fire has no mercy. In 2020, more than 300,000
+                                    hectares were destroyed, wiping out the habitats of countless
+                                    species.&nbsp;&nbsp;Forest fires, which used to be part of Earth's natural cycle,
+                                    are now becoming much more intense and difficult to control.<br><br><br></p>
+                                <img src="/assets/img/guacamayo.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-5">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/Argentina%20uruguay%20-%20abri%202008.png"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            ARG- Apr 2008</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Argentina%20Chile%20-%20agost%202009.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            ARG - Aug 2009</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/incendio_cordoba.jpg" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            Cordoba</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Argentina%20Chile%20-%20feb%202022.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            ARG - Feb 2022</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-5" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-5" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-5" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-5" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-5" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#carousel-5" data-bs-slide-to="3"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="paraguay" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">PARAGUAY</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Paraguay, I have seen the fire
+                                    consume the dry forests of the Chaco. In 2020, fires devoured more than 350,000
+                                    hectares of vegetation. Fires not only destroy our homes but the smoke covers the
+                                    sky, making life difficult for both animals and humans. Fire seasons are now longer,
+                                    as extreme heat extends throughout the year.<br><br><br></p>
+                                <img src="/assets/img/puma.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-4">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/Paraguay%20-%20Agosto%202007.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            PRY - Aug&nbsp; 2007</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Paraguay%20-%20Agosto%202007.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            PRY - Aug&nbsp; 2007</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/Paraguay%20-%20Agosto%202007.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            PRY - Aug&nbsp; 2007</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-4" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-4" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-4" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-4" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-4" data-bs-slide-to="2"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="ecuador" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">ECUADOR</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Ecuador, forest fires have begun
+                                    to threaten the páramos and Andean forests, which are crucial to the
+                                    ecosystem.&nbsp;&nbsp;The páramos, which are essential for water capture, are in
+                                    danger due to these fires. Quito declared an emergency since in recent years it has
+                                    experienced catastrophic fires.<br><br><br></p>
+                                <img src="/assets/img/tucan.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-12">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/ecuador%20-%202015.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            ECU - 2015</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/ecuador%20nov%202022.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            ECU - Nov 2022</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-12" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-12" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-12" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-12" data-bs-slide-to="1"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="uruguay" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">URUGUAY</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">I am the capybara, a resident of
+                                    Uruguay's wetlands. Although fires are not as frequent here as in other countries,
+                                    climate change has increased the risk. In 2021, several fires affected protected
+                                    areas, destroying the habitat of many species like mine.&nbsp;&nbsp;The loss of
+                                    biodiversity and the destruction of wetlands affect the entire food
+                                    chain.<br><br><br></p>
+                                <img src="/assets/img/capibara.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-11">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/uruguay%20-%202007.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            URY - 2007</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="assets/img/bolivia.webp"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                        </p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block" src="assets/img/URUGUAY.jpg"
+                                            alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-11" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-11" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-11" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-11" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-11" data-bs-slide-to="2"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="venezuela" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">VENEZUELA</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Venezuela, forest fires have
+                                    ravaged the Andean lands, where I and other animals live. In 2018, thousands of
+                                    hectares burned, affecting many of my companions.&nbsp;&nbsp;These fires not only
+                                    destroy the tropical forest but also affect the indigenous and rural communities
+                                    that depend on the forests for their livelihoods.<br><br><br><br></p>
+                                <img src="/assets/img/osoFrontino.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-3">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/venezuela%20-%20mar%202005.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            VEN- Mar 2007</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/venezuela%20-%20feb%202007.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            VEN- Feb 2007</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/venezuela%20-%20feb%202022.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            VEN- Feb 2022</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/venezuelafires_tmo_20240326.jpg" alt="Slide Image"></div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-3" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-3" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-3" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-3" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carousel-3" data-bs-slide-to="2"></li>
+                                    <li data-bs-target="#carousel-3" data-bs-slide-to="3"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="peru" class="py-4 py-xl-5"
+            style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+            <div class="container" style="height: 700px;">
+                <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                    <div class="row g-0" style="height: 650px;">
+                        <div class="col-md-6" style="height: 650px; width: 640px">
+                            <div class="text-white p-4 p-md-5" style="background: #b2bf15;height: 650px;width: 640px;">
+                                <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">PERU</h2>
+                                <p class="mb-4" style="font-size: 22px;margin: 0px;">In Peru, I am the spectacled bear,
+                                    known for inhabiting the Andes and mountainous regions. Although forest fires are
+                                    not as frequent here as in other countries in the Amazon region, we also face
+                                    significant threats. In recent years, we have seen an increase in the frequency of
+                                    fires due to climate change and human practices such as agriculture and illegal
+                                    logging. Between July and September 2024, at least 20 people died in 361 fires
+                                    recorded in 22 regions of Peru.<br><br></p>
+                                <img src="/assets/img/osoAnteojos.png" alt="" style="width: 140px; height: auto;">
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-first order-md-last"
+                            style="min-height: 250px;height: 650px; width: 656px;">
+                            <div class="carousel slide" data-bs-ride="carousel" id="carousel-1">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active"><img class="w-100 d-block"
+                                            src="assets/img/peru%20-%202012.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            PER - Sep 2012</p>
+                                    </div>
+                                    <div class="carousel-item"><img class="w-100 d-block"
+                                            src="assets/img/peru%20-%202012.png" alt="Slide Image">
+                                        <p style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                            PER - 2012</p>
+                                    </div>
+                                </div>
+                                <div><a class="carousel-control-prev invisible" href="#carousel-1" role="button"
+                                        data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                        href="#carousel-1" role="button" data-bs-slide="next"></a></div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carousel-1" data-bs-slide-to="0" class="active"></li>
+                                    <li data-bs-target="#carousel-1" data-bs-slide-to="1"></li>
+                                </ol>
+                            </div><a href="#map" style="text-decoration: none;"><button
+                                    class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                    data-bss-hover-animate="pulse" type="button"
+                                    style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                    To Map</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section id="colombia" class="py-4 py-xl-5"
+                style="background: linear-gradient(151deg, #26521b, #5e842e), #214b0e;height: 768px;">
+                <div class="container" style="height: 700px;">
+                    <div class="bg-dark border rounded border-0 border-dark overflow-hidden" style="height: 650px;">
+                        <div class="row g-0" style="height: 650px;">
+                            <div class="col-md-6" style="height: 650px; width: 640px">
+                                <div class="text-white p-4 p-md-5"
+                                    style="background: #b2bf15;height: 650px;width: 640px;">
+                                    <h2 class="fw-bold text-white mb-3" style="margin: 0px;font-size: 42px;">COLOMBIA
+                                    </h2>
+                                    <p class="mb-4" style="font-size: 22px;margin: 0px;">In Colombia, I am the pink
+                                        dolphin, a resident of the rivers and wetlands of the Amazon and Orinoco.
+                                        Although we do not usually live in areas directly affected by forest fires, the
+                                        fire and deforestation severely affect our aquatic habitats. In 2020, Colombia
+                                        lost more than 160,000 hectares of the Amazon rainforest due to fires and
+                                        indiscriminate logging. Furthermore, fires increase sedimentation in rivers and
+                                        affect water quality, putting our survival at risk.<br><br></p>
+                                    <img src="/assets/img/delfin.png" alt="" style="width: 140px; height: auto;">
+                                </div>
+                            </div>
+                            <div class="col-md-6 order-first order-md-last"
+                                style="min-height: 250px;height: 650px; width: 656px;">
+                                <div class="carousel slide" data-bs-ride="carousel" id="carousel-2">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active"><img class="w-100 d-block"
+                                                src="assets/img/Colombia%20-%20feb%202020.png" alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                COL - Feb 2020</p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/Colombia%20-%20marzo%202021.png" alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                COL - Mar 2021</p>
+                                        </div>
+                                        <div class="carousel-item"><img class="w-100 d-block"
+                                                src="assets/img/Colombia-%20feb%202023.png" alt="Slide Image">
+                                            <p
+                                                style="color: rgb(232,243,255);font-size: 27px;padding: 0px 0px 0px 10px;">
+                                                COL - Feb 2023</p>
+                                        </div>
+                                    </div>
+                                    <div><a class="carousel-control-prev invisible" href="#carousel-2" role="button"
+                                            data-bs-slide="prev"></a><a class="carousel-control-next invisible"
+                                            href="#carousel-2" role="button" data-bs-slide="next"></a></div>
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#carousel-2" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#carousel-2" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#carousel-2" data-bs-slide-to="2"></li>
+                                    </ol>
+                                </div><a href="#map" style="text-decoration: none;"><button
+                                        class="btn btn-primary d-xl-flex justify-content-evenly justify-content-xl-center align-items-xl-center"
+                                        data-bss-hover-animate="pulse" type="button"
+                                        style="background: linear-gradient(113deg, var(--bs-orange), #e7b400), var(--bs-orange);font-size: 28px;font-weight: bold;border-radius: 6px;border-style: none;margin: 25px;width: 196.667px;text-align: center;">Back
+                                        To Map</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+
+    <script>
+        // Cargar la API de YouTube
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('background-video', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        function onPlayerStateChange(event) {
+            // Verificamos si el video ha terminado
+            if (event.data === YT.PlayerState.ENDED) {
+                document.getElementById('start-button').style.display = 'block'; // Mostrar el botón al terminar el video
+            }
+        }
+    </script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
