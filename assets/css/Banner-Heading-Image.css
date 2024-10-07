@@ -1,0 +1,14 @@
+.fit-cover {
+  object-fit: cover;
+}
+
+a:hover {
+  color: var(--bs-orange);
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
